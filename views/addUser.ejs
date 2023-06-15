@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div>
+        <h1 class="h1 text-center">Form Penambahan User</h1>
+      </div>
+      <div class="col-6 py-5 px-3 border rounded">
+        <form action="/add-user" method="post">
+          <div class="row mb-3">
+            <label for="inputName3" class="col-sm-4 col-form-label">Name</label>
+            <div class="col-sm-8">
+              <input type="name" class="form-control" id="inputName3" name="name">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" id="inputPassword3" name="password">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-sm-8 offset-sm-4">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

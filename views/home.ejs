@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 p-3 border rounded">
+        <form action="/" method="post">
+          <div class="row mb-3">
+            <label for="inputRows3" class="col-sm-4 col-lg-2 col-form-label">Rows</label>
+            <div class="col-sm-12 col-lg-10">
+              <input type="number" class="form-control" id="inputRows3" name="rows">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputColumns3" class="col-sm-4 col-lg-2 col-form-label">Columns</label>
+            <div class="col-sm-12 col-lg-10">
+              <input type="number" class="form-control" id="inputColumns3" name="columns">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <% if (fibonacci) { %>
+        <div class="col-md-12 mt-3 pt-3 border rounded">
+          <table class="table table-bordered text-center">
+            <tbody>
+              <% let count = 0 %>
+              <% for( let index = 0; index < rows; index++ ) { %>
+                <tr>
+                  <% for( let index = 0; index < columns; index++ ) { %>
+                    <td><%= fibonacci[count] %></td>
+                    <% count++ %>
+                  <% } %>
+                </div>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      <% } %>
+    </div>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
